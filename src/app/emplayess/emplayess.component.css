@@ -1,0 +1,23 @@
+.low{
+    color: rgb(26, 26, 129);
+    height: 20px;
+    width: 800px;
+}
+.medium{
+    color: rgb(148, 94, 18);
+    height: 20px;
+    width: 800px;
+    background-color: blue;
+    color: white;
+
+}
+.high{
+    color: rgb(53, 4, 4);
+    height: 20px;
+    width: 800px;
+}
+.package{
+    background-color: green;
+    height: 20px;
+    width: 800px;
+}

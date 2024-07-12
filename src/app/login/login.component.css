@@ -1,0 +1,38 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    height: 40%;
+    width: 25%;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+div{
+    margin-top: 10px;
+}
+button{
+    height: 30px;
+    width: 70px;
+    margin-top: 3px;
+    background-color: blue;
+    color: azure;
+    border-radius: 30px;
+    text-transform: capitalize;
+    border: 0;
+    margin-top: 10px;
+}
+
+
+    
+    

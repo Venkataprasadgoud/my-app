@@ -1,0 +1,12 @@
+
+
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(177, 177, 165) ;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

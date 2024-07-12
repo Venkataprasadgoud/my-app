@@ -1,0 +1,19 @@
+
+<!-- INTERPOLATION -->
+<h5>my age is {{age}}</h5>
+<h5>my name is{{name}}</h5>
+
+<!-- PROPERTY BINDING -->
+<button [disabled]="!isvalid">create</button>
+<br>
+
+<!-- EVENT BINDING -->
+<button (click)="submit()">submit</button>
+<input type="text" (keypress)="search()">
+<br>
+
+
+<!-- TWO WAY BINIDING -->
+<label for="">phone</label>
+<input type="text"[(ngModel)]="phone">
+<p>{{phone}}</p>
