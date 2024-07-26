@@ -1,40 +1,84 @@
-.parent{
-    height: 100vh;
+/* .parent{
     width: 100vw;
+    height: 100vh;
     display: flex;
 }
-.lift{
-    height: 100%;
+.left{
     width: 20%;
-    background-color: rgb(79, 76, 76);
+    height: 100%;
+    background-color: black;
     color: white;
     text-align: center;
-    text-transform: capitalize;
-    font-weight: 800;  
-}
-.right{
-    height: 100%;
-    width: 80%;
-    background-color: rgb(124, 126, 128);
-}
-h2{
-    font-weight: 800;
-    font-style: oblique;
-    margin: 0;
-    margin-top: 10px;
-}
-h2:hover{
-    background-color: gray;
-}
-button{
-    margin-top: 20px;
-    height: 30px;
-    width: 100px;
-    border-radius: 10px ;
-    background-color: rgb(229, 111, 111);
-    color: white;
-    border: 0;
-    font-weight: 700;
-    text-transform: capitalize;
+    overflow: auto;
+    
 }
 
+.left>h1,h2{
+    text-transform: uppercase;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.left>h2:hover{
+    background-color:gray;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: teal;
+    overflow: auto;
+}
+
+button{
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    width: 100px;
+    cursor: pointer;
+} */
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    overflow: auto;
+    
+}
+
+.left>h1,h2{
+    text-transform: uppercase;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.left>h2:hover{
+    background-color:gray;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: teal;
+    overflow: auto;
+}
+
+button{
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: red;      
+    border-radius: 10px;
+    color: white;
+    width: 100px;
+    cursor: pointer;
+} 
+h1{
+    text-transform: capitalize;
+    color: blue;
+}

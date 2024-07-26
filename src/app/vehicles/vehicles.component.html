@@ -1,0 +1,70 @@
+<!-- filtering -->
+<input type="text" placeholder="search vehicles" [(ngModel)]="term" (keyup)="filter()">
+
+<!-- sorting -->
+<label for="">column</label>
+<select name="" id="" [(ngModel)]="column">
+    <option>color</option>
+    <option>fuel</option>
+</select>
+<label for="">order</label>
+<select name="" id="" [(ngModel)]="order">
+    <option>Asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()">sort</button>
+
+<!-- Pagination -->
+<label for="">limit</label>
+<select name="" id="" [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>50</option>
+</select>
+<label for="">page</label>
+<select name="" id="" [(ngModel)]="pageNo">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select>
+<button (click)="page()">page</button>
+<button>create vehicle</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>Vehicle</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>type</th>
+            <th>fuel</th>
+            <th>color</th>
+            <th>image</th>
+            <th>cost</th>
+            <th>id</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>
+                <img src="{{vehicle.image}}" alt="" width="100px">
+            </td>
+            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.id}}</td>
+            <td>
+                <button routerLink="/dashboard/vehicle-details{{vehicle.id}}">view</button>
+                <button routerLink="/dashboard/createform{{vehicle.id}}">edit</button>
+                <button class="red-button" (click)="delete(vehicle.id)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

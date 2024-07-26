@@ -1,0 +1,106 @@
+/* General reset and layout */
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+}
+
+
+
+.child {
+    
+    
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-transform: capitalize;
+}
+.top{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    text-transform: capitalize;
+   
+}
+.bottom{
+    height: 80%;
+    text-transform: capitalize;
+}
+/* .top, .bottom {
+    margin-bottom: 20px;
+} */
+
+.a1, .a2, .a3, .a4 {
+    margin-bottom: 10px;
+}
+
+/* Input and Button styles */
+
+input[type="text"],
+input[type="number"],
+.button {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-transform: capitalize;
+  
+    /* color: #f2f2f2; */
+}
+
+.button{
+    cursor: pointer;
+    background-color: #1c71d1;
+    color: #fff;
+    border: none;
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table styles */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Form styles */
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+.radio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* Responsive adjustments */
+
+/* @media (max-width: 768px) {
+    .child {
+        width: 100%;
+    }
+} */

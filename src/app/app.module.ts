@@ -9,16 +9,25 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { WellcomeComponent } from './wellcome/wellcome.component';
 import { HomeComponent } from './home/home.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
-import { ServeComponent } from './serve/serve.component';
 import { BMIComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { EmplayessComponent } from './emplayess/emplayess.component';
 import { EventRegistrationComponent } from './event-registration/event-registration.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { EmployeesDataComponent } from './employees-data/employees-data.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MailsComponent } from './mails/mails.component';
+import { StudentsComponent } from './students/students.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { CartComponent } from './cart/cart.component';
+import { MyAppsComponent } from './my-apps/my-apps.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 
 @NgModule({
@@ -29,22 +38,31 @@ import { EventRegistrationComponent } from './event-registration/event-registrat
     PagenotfoundComponent,
     WellcomeComponent,
     HomeComponent,
-  
     DataBindingComponent,
     CalculatorComponent,
     RectangleComponent,
-    CircleComponent,
-    ServeComponent,
+    CircleComponent,  
     BMIComponent,
     DirectivesComponent,
     PipesComponent,
     EmplayessComponent,
     EventRegistrationComponent,
+    FlipkartComponent,
+    EmployeesDataComponent,
+    MailsComponent,
+    VehiclesComponent,
+    StudentsComponent,
+    VehicleDetailsComponent,
+    CartComponent,
+    MyAppsComponent,
+    CreateVehicleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

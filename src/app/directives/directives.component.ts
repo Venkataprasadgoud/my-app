@@ -15,12 +15,7 @@ export class DirectivesComponent implements OnInit {
     {name:"laptop",price:80000,rating:5},
     {name:"tv",price:25000,rating:1.8},
     {name:"glass",price:45,rating:2.8},
-
-
-
-    
-    
-  ]
+   ]
 
   constructor() { }
 

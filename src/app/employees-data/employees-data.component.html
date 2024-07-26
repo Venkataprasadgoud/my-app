@@ -1,0 +1,90 @@
+<div class="parent">
+    <div class="top">
+        <h1>employees data</h1>
+        <form (ngSubmit)="register()">
+            <h2>employees registration</h2>
+            <div>
+                <label for="emp_id">employee id</label>
+                <input id="emp_id" type="number" [(ngModel)]="newEmployee.emp_id" name="=emp_id">
+                <label for="">employee name</label>
+                <input type="name" [(ngModel)]="newEmployee.emp_name" name="name">
+                <label for="">role</label>
+                <input type="name" [(ngModel)]="newEmployee.role" name="name">
+
+            </div>
+            <br>
+            <div>
+                <label for="j_date">joining date</label>
+                <input id="j_date" type="date" [(ngModel)]="newEmployee.j_date" name="j_date">
+                <label for="">phoneno</label>
+                <input id="phoneno" type="number" [(ngModel)]="newEmployee.phoneno" name="phoneno">
+                <label for=>"email</label>
+                <input type="email" [(ngModel)]="newEmployee.email" name="email">
+                <label for="">dob</label>
+                <input id="dob" type="date" [(ngModel)]="newEmployee.dob" name="dob">
+            </div>
+            <br>
+            <div>
+                <label for="">gender</label>
+                <input type="radio" [(ngModel)]="newEmployee.gender" value="male" name="gender">
+                <label for="">male</label>
+                <input type="radio" [(ngModel)]="newEmployee.gender" value="female" name="gender">
+                <label for="">female</label>
+                
+                <label for="">address</label>
+                <textarea name="address" [(ngModel)]="newEmployee.address"></textarea>
+            </div>
+
+            <div class="b">
+                <button type="submit">regsister</button>
+                <button type="reset">clear</button>
+            </div>
+
+
+        </form>
+
+    </div>
+    <div class="bottom">
+        <h3>employee details</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>s.no</th>
+                    <th>empid</th>
+                    <th>emp_name</th>
+                    <th>role</th>
+                    <th>joiningdate</th>
+                    <th>phoneno</th>
+                    <th>email</th>
+                    <th>dob</th>
+                    <th>gender</th>
+                    <th>address</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees;let i=index">
+                    <td>{{i+1}}</td>
+                   
+                    <td>{{employee.emp_id}}</td>
+                    <td>{{employee.emp_name}}</td>
+                    <td>{{employee.role}}</td>
+                    <td>{{employee.j_date|date:'dd/MM/yy'}}</td>
+                    <td>{{employee.phoneno}}</td>
+                    <td>{{employee.email}}</td>
+                    <td>{{employee.dob|date:'dd/MM/yy'}}</td>
+                    <td>{{employee.gender}}</td>
+                    <td>{{employee.address}}</td>
+                    <td>
+                        <button (click)="delete(i)">delete</button>
+                    </td>
+
+                   
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
