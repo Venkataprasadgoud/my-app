@@ -48,7 +48,8 @@ const routes: Routes = [
     {path:'students',component:StudentsComponent},
     {path:'vehicle-details',component:VehicleDetailsComponent},
     {path: 'create-vehicle', component: CreateVehicleComponent},
-    {path:'cart',component:CartComponent}
+    {path:'cart',component:CartComponent},
+    {path:'student'},
   ]},
   {path:'',component:LoginComponent},
   {path:'**',component:PagenotfoundComponent}
