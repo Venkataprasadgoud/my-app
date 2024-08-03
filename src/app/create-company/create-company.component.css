@@ -1,0 +1,87 @@
+/* General Form Styling */
+form {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-transform: capitalize;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Label Styling */
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="number"],
+input[type="radio"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+/* Error Message Styling */
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Department Section Styling */
+h3 {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-left: 5px;
+  color: green;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+
+button {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+button:hover .stars {
+  display: block;
+  filter: drop-shadow(0 0 10px #fffdef
+
+  );
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="radio"] {
+    width: 100%;
+  }
+}

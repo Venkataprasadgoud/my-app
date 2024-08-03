@@ -1,1 +1,25 @@
-<p>create-vehicle works!</p>
+<div>
+    <form [formGroup]="createVehicleForm">
+        <label for="">vehicle</label>
+        <input type="text" formControlName="Vehicle">
+        <label for="">manufacturer</label>
+        <input type="text" formControlName="manufacturer" >
+        <label for="">model</label>
+        <input type="text" formControlName="model">
+        <label for="">type</label>
+        <input type="text"   formControlName="type">
+        <label for="">fuel</label>
+        <input type="text" formControlName="fuel">
+        <label for="">color</label>
+        <input type="text" formControlName="color">
+        <label for="">cost</label>
+        <input type="text" formControlName="cost">
+        
+        <label for="">image</label>
+        <input type="text" formControlName="image">
+       
+
+        <button (click)="create()">create vehicle</button>
+
+    </form>
+</div>

@@ -1,5 +1,5 @@
 import { Component, createComponent, Directive, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -23,12 +23,21 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { CartComponent } from './cart/cart.component';
 import { MyAppsComponent } from './my-apps/my-apps.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { UserComponent } from './user/user.component';
+import { NotifyGuard } from './notify.guard';
+import { CreateCompanyComponent } from './create-company/create-company.component';
+import { ParentComponent } from './parent/parent.component';
+import { Calculator2Component } from './calculator2/calculator2.component';
+// import { RatingComponent } from './rating/rating.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
+import { SiblingCommunicationComponent } from './sibling-communication/sibling-communication.component';
 
 
 
 const routes: Routes = [
   {path: 'login',component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent, children:[
+  {path:'dashboard', canActivate:[AuthenticationGuard],component:DashboardComponent, children:[
     {path:'wellcome', component:WellcomeComponent},
     {path:'home',component:HomeComponent},
     {path:'data-binding',component:DataBindingComponent},
@@ -46,10 +55,24 @@ const routes: Routes = [
     {path:'mails',component:MailsComponent},
     {path:'vehicles', component:VehiclesComponent},
     {path:'students',component:StudentsComponent},
-    {path:'vehicle-details',component:VehicleDetailsComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
     {path: 'create-vehicle', component: CreateVehicleComponent},
     {path:'cart',component:CartComponent},
     {path:'student'},
+    {path:'user',canDeactivate:[NotifyGuard],component:UserComponent},
+    {path:'create-company',component:CreateCompanyComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'calculator2',component:Calculator2Component},
+    {path:'sibling-communication',component:SiblingCommunicationComponent},
+    
+
+    // {path:'rating',component:RatingComponent},
+    {path:'about-company',component:AboutCompanyComponent},
+    {
+      path: 'payments',
+      loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+    }
+
   ]},
   {path:'',component:LoginComponent},
   {path:'**',component:PagenotfoundComponent}
@@ -57,7 +80,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

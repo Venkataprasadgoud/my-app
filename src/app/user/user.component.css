@@ -1,0 +1,48 @@
+General styles for the form
+form {
+    width: 300px; /* Adjust the width as needed */
+    margin:150px; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: fixed;
+}
+
+/* Style for labels */
+label {
+    display: block;
+    font-weight: bold; /* Make labels bold */
+    margin-bottom: 5px; /* Space between label and input */
+    text-transform: capitalize;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 30%; /* Make inputs full width */
+    padding: 8px; /* Add padding inside inputs */
+    border: 1px solid #ccc; /* Gray border for inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+    margin-bottom: 10px; /* Space between inputs */
+}
+
+/* Style for the submit button */
+button {
+   height: 25px;
+   background-color: green;
+   color: white;
+   
+}
+
+/* Change background color on button hover */
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+h2{
+    text-transform: capitalize;
+    display: flex;align-items: center;
+    
+}

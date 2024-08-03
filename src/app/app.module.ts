@@ -28,6 +28,22 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { CartComponent } from './cart/cart.component';
 import { MyAppsComponent } from './my-apps/my-apps.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { UserComponent } from './user/user.component';
+import { CapitalDirective } from './capital.directive';
+import { CreateCompanyComponent } from './create-company/create-company.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { Calculator2Component } from './calculator2/calculator2.component';
+import { OperationsComponent } from './operations/operations.component';
+// import { RatingComponent } from './rating/rating.component';
+import { AboutUsModule } from './about-us/about-us.module';
+import { SiblingCommunicationComponent } from './sibling-communication/sibling-communication.component';
+import { SiblingItamsComponent } from './sibling-itams/sibling-itams.component';
+import { SiblingNavigationComponent } from './sibling-navigation/sibling-navigation.component';
+import { SiblingCartComponent } from './sibling-cart/sibling-cart.component';
+import { SiblingDiscountComponent } from './sibling-discount/sibling-discount.component';
 
 
 @NgModule({
@@ -55,14 +71,30 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
     VehicleDetailsComponent,
     CartComponent,
     MyAppsComponent,
-    CreateVehicleComponent
+    CreateVehicleComponent,
+    UserComponent,
+    CapitalDirective,
+    CreateCompanyComponent,
+    ParentComponent,
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    Calculator2Component,
+    OperationsComponent,
+    // RatingComponent,
+    SiblingCommunicationComponent,
+    SiblingItamsComponent,
+    SiblingNavigationComponent,
+    SiblingCartComponent,
+    SiblingDiscountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
