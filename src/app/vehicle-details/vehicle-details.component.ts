@@ -14,6 +14,7 @@ export class VehicleDetailsComponent implements OnInit {
   constructor(private _activatedRoute:ActivatedRoute,private _vehicleService:VehiclesService) { 
     _activatedRoute.params.subscribe(
       (data:any)=>{
+        // alert(data.id)
         _vehicleService.getVehicle(data.id).subscribe(
           (data:any)=>{
             this.vehicle=data;

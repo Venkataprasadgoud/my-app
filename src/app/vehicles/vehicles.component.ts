@@ -24,7 +24,7 @@ export class VehiclesComponent implements OnInit {
             }
         )
     }
-
+  
     ngOnInit(): void {
     }
     filter(){

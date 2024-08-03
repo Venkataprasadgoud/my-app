@@ -1,17 +1,26 @@
 <!-- <p>login works!</p> -->
+ 4
+ <h4>eve.holt@reqres.in</h4>
 <div class="parent">
     <div class="child">
-        <form action="">
+        <form [formGroup]="loginform">
             <h1>login page</h1>
             <div>
-                <label for="">user name</label>
-                <input type="" placeholder="email or phone number">
+                <label for="">email</label>
+                <input type="" placeholder="email or phone number" formControlName="email" >
+                <h4>eve.holt@reqres.in</h4>
+
+                
             </div>
             <div>
                 <label for="">password</label>
-                <input type="" placeholder=" enter password">
+                <input type="" placeholder=" enter password" formControlName="password">
+                <div *ngIf="loginform.get('password')?.touched && loginform.get('password')?.invalid">
+                    <p *ngIf="loginform.get('password')?.errors?.['pattern']"> password should contain one cap</p>
+
+                </div>
             </div>
-            <button routerLink="/dashboard">login</button>
+            <button (click)="login()">login</button>
         </form>
 
     </div>
