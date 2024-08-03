@@ -63,6 +63,8 @@ const routes: Routes = [
     {path:'parent',component:ParentComponent},
     {path:'calculator2',component:Calculator2Component},
     {path:'sibling-communication',component:SiblingCommunicationComponent},
+    {path:'calculator3',component:Calculator2Component},
+    {path:'parent'}
     
 
     // {path:'rating',component:RatingComponent},
