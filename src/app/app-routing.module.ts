@@ -58,6 +58,7 @@ const routes: Routes = [
     {path:'vehicle-details/:id',component:VehicleDetailsComponent},
     {path: 'create-vehicle', component: CreateVehicleComponent},
     {path:'cart',component:CartComponent},
+    {path:'student'},
     {path:'user',canDeactivate:[NotifyGuard],component:UserComponent},
     {path:'create-company',component:CreateCompanyComponent},
     {path:'parent',component:ParentComponent},
